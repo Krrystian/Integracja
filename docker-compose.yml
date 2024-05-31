@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  aplikacja:
+    build:
+      context: ./aplikacja
+      dockerfile: Dockerfile
+    container_name: nextjs_container
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./aplikacja:/app
+      - /app/node_modules
+    depends_on:
+      - mysql
+
+  mysql:
+    build:
+      context: ./mysql
+      dockerfile: Dockerfile
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: integracja
+      MYSQL_USER: integra
+      MYSQL_PASSWORD: integra
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3308:3306"
+
+volumes:
+  mysql_data:

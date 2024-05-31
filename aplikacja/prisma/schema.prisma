@@ -1,0 +1,160 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model bezrobocie {
+  Kod   String  @id @db.VarChar(7)
+  Nazwa String? @db.VarChar(19)
+  r2004 String? @db.VarChar(4)
+  r2005 String? @db.VarChar(4)
+  r2006 String? @db.VarChar(4)
+  r2007 String? @db.VarChar(4)
+  r2008 String? @db.VarChar(4)
+  r2009 String? @db.VarChar(4)
+  r2010 String? @db.VarChar(4)
+  r2011 String? @db.VarChar(4)
+  r2012 String? @db.VarChar(4)
+  r2013 String? @db.VarChar(4)
+  r2014 String? @db.VarChar(4)
+  r2015 String? @db.VarChar(4)
+  r2016 String? @db.VarChar(4)
+  r2017 String? @db.VarChar(4)
+  r2018 String? @db.VarChar(4)
+  r2019 String? @db.VarChar(3)
+  r2020 String? @db.VarChar(4)
+  r2021 String? @db.VarChar(3)
+  r2022 String? @db.VarChar(3)
+}
+
+model pkb {
+  Kod   String  @id @db.VarChar(7)
+  Nazwa String? @db.VarChar(19)
+  r2004 String? @db.VarChar(6)
+  r2005 String? @db.VarChar(6)
+  r2006 String? @db.VarChar(6)
+  r2007 String? @db.VarChar(6)
+  r2008 String? @db.VarChar(6)
+  r2009 String? @db.VarChar(6)
+  r2010 String? @db.VarChar(6)
+  r2011 String? @db.VarChar(6)
+  r2012 String? @db.VarChar(6)
+  r2013 String? @db.VarChar(6)
+  r2014 String? @db.VarChar(6)
+  r2015 String? @db.VarChar(6)
+  r2016 String? @db.VarChar(6)
+  r2017 String? @db.VarChar(6)
+  r2018 String? @db.VarChar(6)
+  r2019 String? @db.VarChar(6)
+  r2020 String? @db.VarChar(6)
+  r2021 String? @db.VarChar(7)
+  r2022 String? @db.VarChar(7)
+}
+
+model srednia_dl_zycia {
+  Kod   String  @id @db.VarChar(7)
+  Nazwa String? @db.VarChar(19)
+  r2004 String? @db.VarChar(4)
+  r2005 String? @db.VarChar(4)
+  r2006 String? @db.VarChar(4)
+  r2007 String? @db.VarChar(4)
+  r2008 String? @db.VarChar(4)
+  r2009 String? @db.VarChar(4)
+  r2010 String? @db.VarChar(4)
+  r2011 String? @db.VarChar(4)
+  r2012 String? @db.VarChar(4)
+  r2013 String? @db.VarChar(4)
+  r2014 String? @db.VarChar(4)
+  r2015 String? @db.VarChar(4)
+  r2016 String? @db.VarChar(4)
+  r2017 String? @db.VarChar(4)
+  r2018 String? @db.VarChar(4)
+  r2019 String? @db.VarChar(4)
+  r2020 String? @db.VarChar(4)
+  r2021 String? @db.VarChar(4)
+  r2022 String? @db.VarChar(4)
+}
+
+model wsp_dzietnosci {
+  Kod   String  @id @db.VarChar(7)
+  Nazwa String? @db.VarChar(19)
+  r2004 String? @db.VarChar(5)
+  r2005 String? @db.VarChar(5)
+  r2006 String? @db.VarChar(5)
+  r2007 String? @db.VarChar(5)
+  r2008 String? @db.VarChar(5)
+  r2009 String? @db.VarChar(5)
+  r2010 String? @db.VarChar(5)
+  r2011 String? @db.VarChar(5)
+  r2012 String? @db.VarChar(5)
+  r2013 String? @db.VarChar(5)
+  r2014 String? @db.VarChar(5)
+  r2015 String? @db.VarChar(5)
+  r2016 String? @db.VarChar(5)
+  r2017 String? @db.VarChar(5)
+  r2018 String? @db.VarChar(5)
+  r2019 String? @db.VarChar(5)
+  r2020 String? @db.VarChar(5)
+  r2021 String? @db.VarChar(5)
+  r2022 String? @db.VarChar(5)
+}
+
+model wynagrodzenie {
+  Kod   String  @id @db.VarChar(7)
+  Nazwa String? @db.VarChar(19)
+  r2004 String? @db.VarChar(7)
+  r2005 String? @db.VarChar(7)
+  r2006 String? @db.VarChar(7)
+  r2007 String? @db.VarChar(7)
+  r2008 String? @db.VarChar(7)
+  r2009 String? @db.VarChar(7)
+  r2010 String? @db.VarChar(7)
+  r2011 String? @db.VarChar(7)
+  r2012 String? @db.VarChar(7)
+  r2013 String? @db.VarChar(7)
+  r2014 String? @db.VarChar(7)
+  r2015 String? @db.VarChar(7)
+  r2016 String? @db.VarChar(7)
+  r2017 String? @db.VarChar(7)
+  r2018 String? @db.VarChar(7)
+  r2019 String? @db.VarChar(7)
+  r2020 String? @db.VarChar(7)
+  r2021 String? @db.VarChar(7)
+  r2022 String? @db.VarChar(7)
+}
+
+model polityczne {
+  Id        Int     @id @default(autoincrement())
+  Nazwa     String? @db.VarChar(100)
+  Przedzial String? @db.VarChar(100)
+}
+
+model historyczne {
+  Id        Int     @id @default(autoincrement())
+  Nazwa     String? @db.VarChar(100)
+  Przedzial String? @db.VarChar(100)
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String?  @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  password  String
+  role      String   @default("USER")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([userId])
+}
