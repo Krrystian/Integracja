@@ -1,6 +1,6 @@
 # Zestawienie danych na temat współczynnika dzietności z danymi gospodarczymi, politycznymi i historycznymi w latach 2004-2022.
 ## Informacje ogólne
-Projekt został wykonany jako projekt zaliczeniowy na przedmioty: Integrajca Systemów, Programowanie aplikacji w chmurze.
+Projekt został wykonany jako projekt zaliczeniowy na przedmioty: Integrajca Systemów, Programowanie aplikacji w chmurze. Dane zostały pobrane z baz danych GUS.
 
 ## Instalacja (bez dockera)
 - Przejść do folderu /mysql.
